@@ -4,7 +4,7 @@ class MatrixMultiply {
     public static void main(String args[]) {
 
         Scanner sc = new Scanner(System.in);
-        int r1, r2, c1, c2;
+        int r1, r2, c1, c2; // two matrix r and c
 
         System.out.println("Enter rows and columns of 1st matrix:");
         r1 = sc.nextInt();
