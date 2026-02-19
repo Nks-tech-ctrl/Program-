@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+
+ class AddSub {
+    double a, b;
+
+    void getValues(double x, double y) {
+        a = x;
+        b = y;
+    }
+
+    void add() {
+        System.out.println("Addition: " + (a + b));
+    }
+
+    void subtract() {
+        System.out.println("Subtraction: " + (a - b));
+    }
+}
+
+
+class MultiplyDivision extends AddSub {
+
+    void multiply() {
+        System.out.println("Multiplication: " + (a * b));
+    }
+
+    void divide() {
+        if (b != 0)
+            System.out.println("Division: " + (a / b));
+        else
+            System.out.println("Division not possible (cannot divide by zero)");
+    }
+}
+
+
+public class MainClass {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double x = sc.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double y = sc.nextDouble();
+
+        MultiplyDivision obj = new MultiplyDivision();
+
+        obj.getValues(x, y);
+
+        obj.add();
+        obj.subtract();
+        obj.multiply();
+        obj.divide();
+
+        sc.close();
+    }
+}
