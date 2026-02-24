@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaish College</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #444;
+        }
+
+    
+        .hero {
+           
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('vce.png');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+        }
+
+
+        @media (min-width: 992px) {
+            .dropdown:hover .dropdown-menu {
+                display: block; 
+                margin-top: 0;
+            }
+            .mega-menu {
+                width: 900px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 20px;
+                border-top: 3px solid #ffc107;
+            }
+        }
+
+    
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+
+        .yellow-alert-box {
+            background-color: #ffc107;
+            border-radius: 8px;
+            color: #000;
+        }
+
+        
+        footer {
+            background: #000;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">Vaish College</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admissions
+                        </a>
+                        <div class="dropdown-menu mega-menu shadow border-0" aria-labelledby="navbarDropdown">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4 border-end">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-pencil-square me-2 text-secondary"></i> How to Apply</a></li>
+                                            <li class="mb-2"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-award me-2 text-secondary"></i> Scholarships</a></li>
+                                            <li class="mb-2"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-cash-coin me-2 text-secondary"></i> Education Loan</a></li>
+                                            <li class="mb-2"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-question-circle me-2 text-secondary"></i> FAQs</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-4 border-end">
+                                        <h6 class="fw-bold text-uppercase mb-3">Campus Helpline</h6>
+                                        <div class="mb-3">
+                                            <strong class="text-primary d-block small">ROHTAK CAMPUS</strong>
+                                            <span class="text-muted small">01262-222222</span>
+                                        </div>
+                                        <div>
+                                            <strong class="text-primary d-block small">ADMISSION OFFICE</strong>
+                                            <span class="text-muted small">helpdesk@vaish.edu.in</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="yellow-alert-box p-3">
+                                            <strong class="d-block mb-2">Admissions Open 2025-26</strong>
+                                            <p class="small mb-2">Campus tours available Monday to Friday.</p>
+                                            <hr class="my-2">
+                                            <small>Last date Phase 1:</small>
+                                            <h5 class="fw-bold m-0">30 Jan 2026</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Academics</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-primary fw-semibold px-4" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Welcome to Excellence</h1>
+            <p class="lead mb-4">Shaping the engineers of tomorrow with world-class infrastructure.</p>
+            <a href="#" class="btn btn-light btn-lg rounded-pill px-5 fw-bold text-dark">Explore Campus</a>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold text-uppercase">Who We Are</h6>
+                    <h2 class="display-6 fw-bold mb-3">About Our College</h2>
+                    <p class="text-secondary">Vaish College of Engineering is committed to providing quality technical education through experienced faculty, modern infrastructure, and student-centric learning.</p>
+                    
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2 fw-semibold"><i class="bi bi-check-lg text-primary me-2 fw-bold"></i> Experienced Faculty</li>
+                        <li class="mb-2 fw-semibold"><i class="bi bi-check-lg text-primary me-2 fw-bold"></i> Modern Laboratories</li>
+                        <li class="mb-2 fw-semibold"><i class="bi bi-check-lg text-primary me-2 fw-bold"></i> Strong Placement Support</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="vce.png" alt="About Vaish College" class="img-fluid rounded shadow w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light" id="courses">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Top Courses</h2>
+                <p class="text-muted">Explore our wide range of engineering disciplines</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="cse.png" class="card-img-top" alt="CSE" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Computer Science</h5>
+                            <p class="card-text text-secondary small">Learn AI, ML, and Web Development with cutting-edge tools.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 pb-3">
+                            <a href="#" class="btn btn-primary w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="civil.png" class="card-img-top" alt="Civil" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Civil Engineering</h5>
+                            <p class="card-text text-secondary small">Design the infrastructure of tomorrow with practical labs.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 pb-3">
+                            <a href="#" class="btn btn-primary w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="mechanical.png" class="card-img-top" alt="Mechanical" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mechanical</h5>
+                            <p class="card-text text-secondary small">Master robotics, thermodynamics, and manufacturing.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 pb-3">
+                            <a href="#" class="btn btn-primary w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="electric.png" class="card-img-top" alt="Electrical" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Electronics</h5>
+                            <p class="card-text text-secondary small">Innovate in the field of circuits, IoT, and communication.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 pb-3">
+                            <a href="#" class="btn btn-primary w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-6 col-md-3">
+                    <h3 class="display-5 fw-bold text-warning">3000+</h3>
+                    <p class="mb-0">Students</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h3 class="display-5 fw-bold text-warning">100+</h3>
+                    <p class="mb-0">Faculty</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h3 class="display-5 fw-bold text-warning">18+</h3>
+                    <p class="mb-0">Years Excellence</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h3 class="display-5 fw-bold text-warning">100%</h3>
+                    <p class="mb-0">Placements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center text-white-50">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Vaish College of Engineering. All rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 px-md-5 pb-5">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-dark">Admission Application 2025</h3>
+                        <p class="text-muted">Start your journey with Vaish College of Engineering</p>
+                    </div>
+
+                    <form>
+                        <h6 class="text-primary border-bottom pb-2 mb-3 fw-bold">Personal Details</h6>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">First Name</label>
+                                <input type="text" class="form-control" placeholder="e.g. Rahul" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Last Name</label>
+                                <input type="text" class="form-control" placeholder="e.g. Sharma" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Email Address</label>
+                                <input type="email" class="form-control" placeholder="name@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
+                            </div>
+                        </div>
+
+                        <h6 class="text-primary border-bottom pb-2 mb-3 fw-bold">Course Preference</h6>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Degree</label>
+                                <select class="form-select" required>
+                                    <option value="" disabled selected>Select Degree</option>
+                                    <option>B.Tech</option>
+                                    <option>M.Tech</option>
+                                    <option>Diploma</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Branch</label>
+                                <select class="form-select" required>
+                                    <option value="" disabled selected>Select Branch</option>
+                                    <option>Computer Science (CSE)</option>
+                                    <option>Mechanical (ME)</option>
+                                    <option>Civil (CE)</option>
+                                    <option>Electronics (ECE)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h6 class="text-primary border-bottom pb-2 mb-3 fw-bold">Address Details</h6>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <label class="form-label fw-bold small">Street Address</label>
+                                <textarea class="form-control" rows="2" placeholder="House No, Street, Landmark"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">City</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">State</label>
+                                <select class="form-select">
+                                    <option>Haryana</option>
+                                    <option>Delhi</option>
+                                    <option>Punjab</option>
+                                    <option>Uttar Pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-3 fw-bold fs-5">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
