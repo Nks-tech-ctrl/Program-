@@ -15,6 +15,7 @@ public class Calculator {
         System.out.println("2. Subtract");
         System.out.println("3. Multiply");
         System.out.println("4. Divide");
+        System.out.println("5. Modulus");
 
         System.out.println("Choose Option!");
         choice = sc.nextInt();
@@ -67,10 +68,21 @@ public class Calculator {
 
             System.out.println(result);
 
-        } else {
+        } else if(choice==5) {
+            System.out.print("Enter num1:");
+            num1 = sc.nextDouble();
+
+            System.out.print("Enter num2:");
+            num2 = sc.nextDouble();
+
+            result = num1 %num2;
+
+            System.out.println(result);
+        }else {
             System.out.println("Invalid Choice!");
         }
 
         sc.close();
     }
 }
+
