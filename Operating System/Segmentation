@@ -1,0 +1,35 @@
+//segmentation 
+#include <stdio.h>
+
+struct segment {
+    int limit;
+    int base;
+} segTable[10];
+
+int main() {
+    int n, segNum, offset;
+
+    printf("Enter the number of segments: ");
+    scanf("%d", &n);
+
+    for(int i = 0; i < n; i++) {
+        printf("Enter Base Address and Limit for Segment %d: ", i);
+        scanf("%d %d", &segTable[i].base, &segTable[i].limit);
+    }
+
+    printf("\nEnter Segment Number and Offset: ");
+    scanf("%d %d", &segNum, &offset);
+
+    if(segNum < n) {
+        if(offset < segTable[segNum].limit) {
+            int physicalAddr = segTable[segNum].base + offset;
+            printf("Physical Address: %d\n", physicalAddr);
+        } else {
+            printf("Trap: Addressing Error (Offset exceeds limit)\n");
+        }
+    } else {
+        printf("Invalid Segment Number!\n");
+    }
+
+    return 0;
+}
