@@ -1,0 +1,39 @@
+//fifo 14
+#include <stdio.h>
+
+int main() {
+    int incomingStream[] = {4, 1, 2, 4, 5};
+    int n = sizeof(incomingStream) / sizeof(incomingStream[0]);
+    int frames = 3;
+    int temp[3] = {-1, -1, -1}; // Memory slots
+    int pageFaults = 0;
+    int index = 0; // Tracks which slot to replace next
+
+    printf("Incoming \t Frame 1 \t Frame 2 \t Frame 3\n");
+    printf("-------------------------------------------------------\n");
+
+    for(int i = 0; i < n; i++) {
+        int found = 0;
+
+        // Check if the page is already in memory (Hit)
+        for(int j = 0; j < frames; j++) {
+            if(temp[j] == incomingStream[i]) {
+                found = 1;
+                break;
+            }
+        }
+
+        // If not found (Miss/Fault), replace the oldest page
+        if(found == 0) {
+            temp[index] = incomingStream[i];
+            index = (index + 1) % frames; // Circularly move to next slot (0, 1, 2, 0...)
+            pageFaults++;
+        }
+
+        // Print current state of frames
+        printf("%d \t\t %d \t\t %d \t\t %d\n", incomingStream[i], temp[0], temp[1], temp[2]);
+    }
+
+    printf("\nTotal Page Faults: %d\n", pageFaults);
+    return 0;
+}
