@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+            .container {
+            /* Critical: Establish Flexbox layout context */
+            display: flex;
+            flex-direction: column;
+            /* Stack children vertically */
+            align-items: center;
+            /* Center children horizontally */
+
+            /* Fixed container dimensions */
+            width: 300px;
+            height: 300px;
+
+            /* Basic styling */
+            padding: 20px;
+            background: rgb(141, 127, 222);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            /* Ensure padding doesn't affect dimensions */
+            color: white;
+            /* Make text readable on purple */
+        }
+
+        /* Make form and its elements span the width of the container */
+        form {
+            width: 100%;
+            text-align: center;
+            /* Center input/button within the form */
+        }
+
+        input {
+            width: 100%;
+            /* Input fills the form width */
+            max-width: 250px;
+            /* Set max width so it doesn't get too big */
+            box-sizing: border-box;
+            /* Padding is included in width calculation */
+            padding: 10px;
+            margin: 10px 0;
+            /* Regular spacing above and below */
+            border: none;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+           
+            max-width: 120px;
+           
+            padding: 10px;
+            background-color: #b3e0e8e0;
+         
+            border-radius: 8px;
+            border: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            
+        }
+
+       
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var error = "";
+
+            if (username == "") {
+                error = "username cannot be empty!";
+            } else if (password.length < 6) {
+                error = "Password must be at least 6 digit or characters!";
+            }
+
+            if (error != "") {
+                document.getElementById("error").innerHTML = error;
+                return false;
+            }
+
+            alert("Login Successfull");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login </h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" id="username" placeholder="Enter username" required><br><br>
+            <input type="password" id="password" placeholder="Enter password" required><br><br>
+
+            <div id="error" class="error"></div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
